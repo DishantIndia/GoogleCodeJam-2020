@@ -1,0 +1,33 @@
+------------------------------------------Nesting Depth (5pts, 11pts)---------------------------------
+import java.util.*
+
+fun main(args: Array<String>) {
+    val scan = Scanner(System.`in`)
+    var kotlin = scan.nextLine().toInt()
+    for (k in 1..kotlin) {
+        var x = scan.nextLine()
+        var finalstringcodejam = ""
+        var codejam = 0
+
+        for (i in 0..x.length - 1) {
+            var z = x[i] - '0'
+            while (codejam > z) {
+                finalstringcodejam += ")"
+                codejam--
+            }
+
+            while (codejam < z) {
+                finalstringcodejam += "("
+                codejam++
+            }
+            finalstringcodejam += "$z"
+        }
+        while (codejam != 0) {
+            finalstringcodejam += ")"
+            codejam--
+        }
+        println("Case #${k}: ${finalstringcodejam}")
+    }
+
+}
+--------------------------------------------------------------------------------------
