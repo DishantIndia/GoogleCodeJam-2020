@@ -1,0 +1,35 @@
+-----------------------------------------------ESAb ATAd (1pts, 9pts, 16pts)-----------------------------------------------
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int tommy;
+    cin>>tommy;
+    string sommy;
+    cin>>sommy;
+    while(tommy--)
+    {
+        char commy,okommy;
+        string ansommy="";
+        for(int i=0;i<10;i++)
+        {
+            ansommy+="0";
+        }
+        for(int i=1;i<=10;i++)
+        {
+            cout<<i<<endl;
+            fflush(stdout);
+            cin>>commy;
+            ansommy[i-1]=commy;
+        }
+        cout<<ansommy<<endl;
+        fflush(stdout);
+        cin>>okommy;
+        if(okommy=='N')
+            return 0;
+        else
+            continue;
+    }
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------
